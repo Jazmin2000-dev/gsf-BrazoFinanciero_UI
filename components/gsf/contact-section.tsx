@@ -66,7 +66,7 @@ export function ContactSection() {
   };
 
   const nextStep = () => {
-    setStep((prev) => Math.max(prev - 1, 1));
+    setStep((prev) => Math.min(prev + 1, TOTAL_STEPS + 1)); // Permite avanzar hasta la pantalla de éxito
   };
 
   const prevStep = () => {
@@ -115,7 +115,7 @@ export function ContactSection() {
   formData.source !== "";
 
   // El paso 2 es válido SI eligió una solución Y (si eligió "No estoy seguro", debe haber escrito algo)
-  const isStep2Valid = formData.currentSituation !== "";
+const isStep2Valid = formData.currentSituation !== "";
   const isStep3Valid = formData.operationTypes.length > 0;
   const isStep4Valid = formData.projectPriority !== "";
 
@@ -379,16 +379,16 @@ export function ContactSection() {
                 </div>
                 <div className="space-y-3">
                   {[   
-                    { value: "Crédito a clientes", label: "Crédito a clientes" },
-                    { value: "Arrendamiento", label: "Arrendamiento" },
-                    { value: "Financiamiento interno", label: "Financiamiento interno" },
-                    { value: "Crédito de nómina", label: "Crédito de nómina" },
-                    { value: "Aún lo estoy evaluando", label: "Aún lo estoy evaluando" },
+                    { value: "Crédito a clientes", label: "Crédito a clientes", description: "Solo Crédito a clientes" },
+                    { value: "Arrendamiento", label: "Arrendamiento", description: "Operaciones de arrendamiento" },
+                    { value: "Financiamiento interno", label: "Financiamiento interno", description: "Financiamiento interno de la empresa" },
+                    { value: "Crédito de nómina", label: "Crédito de nómina", description: "Crédito basado en la nómina" },
+                    { value: "Aún lo estoy evaluando", label: "Aún lo estoy evaluando", description: "Aún no he decidido" },
                   ].map((option) => (
                     <motion.button
                       key={option.value}
                       type="button"
-                      onClick={() => handleSelect("operationTypes", option.value)}
+                      onClick={() => handleMultiSelect("operationTypes", option.value)}
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.99 }}
                       className={`w-full p-4 text-left rounded-xl border transition-all ${
@@ -408,9 +408,7 @@ export function ContactSection() {
                             <Check className="h-3 w-3 text-white" />
                           )}   
                         </div>
-                        {formData.operationTypes?.includes(option.value) && (
-                          <Check className="h-5 w-5 text-primary" />
-                        )}
+                        <span className="text-foreground font-heading font-medium">{option.label}</span>
                       </div>
                     </motion.button>
                   ))}
@@ -488,12 +486,12 @@ export function ContactSection() {
                     Atrás
                   </Button>
                   <Button
-                    type="button"
+                    type="submit"
                     onClick={nextStep}
                     className="flex-1 bg-primary hover:bg-primary/90 group"
-                    disabled={!formData.projectPriority}
+                    disabled={!isStep4Valid}
                   >
-                    Continuar
+                    Enviar Solicitud
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
@@ -542,7 +540,7 @@ export function ContactSection() {
                       source: "",
                       currentSituation: "",
                       operationTypes: [],
-                      projectPriority:[],
+                      projectPriority:"",
                     });
                   }}
                 >
