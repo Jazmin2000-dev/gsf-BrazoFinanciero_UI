@@ -45,7 +45,7 @@ export function SofomConcepto() {
 
 
   return (
-    <section ref={ref} className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+    <section id="brazo financiero" ref={ref} className="py-20 md:py-28 bg-secondary relative overflow-hidden">
     {/*  <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

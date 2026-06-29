@@ -21,10 +21,9 @@ export function Navigation() {
 
   const navItems = [
     { label: "Inicio", href: "#" },
-    { label: "SOFOM", href: "#sofom" },
+    { label: "Brazo financiero", href: "#brazo financiero" },
     { label: "Proceso", href: "#proceso" },
-    { label: "Diferencias", href: "#diferencias" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Sectores", href: "#sectores" },
   ];
 
   return (
