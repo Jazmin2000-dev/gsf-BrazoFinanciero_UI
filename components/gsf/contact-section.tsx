@@ -79,7 +79,7 @@ export function ContactSection() {
     e.preventDefault();
     try {
       // Enviamos los datos a tu Webhook
-      const response = await fetch("https://hook.us2.make.com/ptor1i93pvu2cjyllrqx7e3icwjsilgy", {
+      const response = await fetch("https://hook.us2.make.com/8qwndw155yxti9pnmigmz7ox75kuwh6o", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

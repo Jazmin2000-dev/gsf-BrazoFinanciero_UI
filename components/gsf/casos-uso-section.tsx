@@ -89,7 +89,7 @@ export function CasosUsoSection() {
     },
     {
       icon: AdvisorIcon,
-      title: "Financiamiento inter-compañía",
+      title: "Financiamiento\ninter-compañía",
       description: "Estructura el flujo de recursos entre las empresas de tu grupo de forma ordenada.",
     },
     {
@@ -141,7 +141,7 @@ export function CasosUsoSection() {
               >
                 <profile.icon className="h-7 w-7 text-primary" />
               </motion.div>
-              <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+              <h3 className="whitespace-pre-line font-heading text-lg font-semibold text-foreground mb-2">
                 {profile.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

@@ -113,10 +113,10 @@ export function SofomSection() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            El proceso de estructuración una SOFOM
+            El proceso de estructuración de un brazo financiero
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Constituir una SOFOM implica más que crear una empresa.
+            Constituir una brazo financiero implica más que crear una empresa.
           
             
           </p>
@@ -154,7 +154,7 @@ export function SofomSection() {
                       <span className="text-xs font-bold text-primary mb-1">{step.number}</span>
                       <step.icon className="h-8 w-8 text-foreground" />
                     </motion.div>
-                    <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+                    <h3 className=" font-heading text-lg font-semibold text-foreground mb-2">
                       {step.title}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">

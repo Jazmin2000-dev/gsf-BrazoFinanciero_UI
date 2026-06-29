@@ -80,7 +80,7 @@ export function CredibilitySection() {
     },
     {
       icon: EcosystemIcon,
-      title: "Préstamos inter-compañía",
+      title: "Préstamos\ninter-compañía",
       description: "Mover recursos entre empresas del grupo es una operación financiera de facto.",
     },
     {
@@ -120,6 +120,7 @@ export function CredibilitySection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
                 duration: 0.6, 
+                
                 delay: 0.2 + index * 0.12,
                 ease: [0.22, 1, 0.36, 1]
               }}
@@ -132,7 +133,7 @@ export function CredibilitySection() {
               >
                 <feature.icon className="h-6 w-6 text-primary" />
               </motion.div>
-              <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+              <h3 className="whitespace-pre-line font-heading text-lg font-semibold text-foreground mb-2">
                 {feature.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

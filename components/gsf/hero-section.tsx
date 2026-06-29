@@ -35,9 +35,9 @@ export function HeroSection() {
             }}
             className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight mb-6 text-balance"
           >
-            Un Brazo Financiero{" "} 
+            Una Institución Financiera en tu grupo{" "} 
             <span className="text-primary relative">
-            Impulsa tus ventas
+            impulsa tus ventas
               <motion.span
                 className="absolute -bottom-2 left-0 right-0 h-1 bg-primary/30 rounded-full"
                 initial={{ scaleX: 0 }}

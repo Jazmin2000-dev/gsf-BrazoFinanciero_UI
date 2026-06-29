@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+// Glowing dot alternative
+const GlowDot = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 16 16" fill="none" className={className}>
+    <circle cx="8" cy="8" r="3" fill="#018abe" opacity="0.2" />
+    <circle cx="8" cy="8" r="2" fill="#018abe" opacity="0.4" />
+    <circle cx="8" cy="8" r="1" fill="#018abe" />
+  </svg>
+);
+
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const StructureIcon = ({ className }: { className?: string }) => (
@@ -19,6 +28,21 @@ const StructureIcon = ({ className }: { className?: string }) => (
 export function SofomConcepto() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const benefits = [
+    "Vendes más por dar facilidad a tus clientes.",
+    "El interés del financiamiento se queda en casa",
+    "Aperturas una nueva vertical de negocio.",
+    "El riesgo no está en dar crédito, está en no controlarlo.",
+    "Tienes el control de tus financiamientos; del scoring y la estructura de tus propios créditos entregados.",
+    "Fidelizas con tus clientes y colaboradores.",
+    "Apoyas de manera formal a tus empleados.",
+    "Generas un clima laboral estable y reduces la rotación.",
+    "Accedes a líneasde fondeoexterno.",
+    "Tienes beneficios fiscales estratégicos reales y legales.",
+  ];
+
+
 
   return (
     <section ref={ref} className="py-20 md:py-28 bg-secondary relative overflow-hidden">
@@ -49,6 +73,33 @@ export function SofomConcepto() {
           </div>
         </motion.div>
       </div>*/}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          
+        >
+          <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4 text-center">
+            ¿Qué gano si tengo un brazo financiero?           
+          </h2>
+          <br></br><br></br>
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                className="flex items-start gap-3 group"
+              >
+                <GlowDot className="h-4 w-4 shrink-0 mt-1 group-hover:scale-125 transition-transform" />
+                <span className="text-foreground text-sm">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+            <br></br><br></br>
 
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +112,7 @@ export function SofomConcepto() {
           <div className="absolute top-0 left-0 w-72 h-72 bg-primary-foreground/10 rounded-full blur-3xl -translate-x-1/3 -translate-y-1/3" />
           <div className="absolute bottom-0 right-0 w-72 h-72 bg-primary-foreground/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
           <div className="relative z-10">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-primary-foreground mb-5 text-balance">
+            <h2 className="font-heading text-4xl font-semibold text-primary-foreground mb-8 text-center">
               ¿Qué es una SOFOM?
             </h2>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-9 max-w-2xl mx-auto text-pretty">

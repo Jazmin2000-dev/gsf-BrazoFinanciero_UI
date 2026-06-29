@@ -16,7 +16,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'GSF - Brazo Financiero',
-  description: 'Expertos especializados en estructuración de SOFOM. Te ayudamos a implementar soluciones financieras efectivas.',
+  description: 'Expertos especializados en estructuración de instituciones financieras. Te ayudamos a implementar tu brazo financiero.',
   generator: 'v0.app',
   icons: {
     icon: "/icon.png",
