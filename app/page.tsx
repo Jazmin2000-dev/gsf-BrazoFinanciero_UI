@@ -13,6 +13,7 @@ import {CreditoSection} from "@/components/gsf/credito-section";
 import {SofomConcepto} from "@/components/gsf/sofom-concepto"; 
 import {BienestarFinancieroSection} from "@/components/gsf/bienestar-financiero-section";
 import { SectoresSection } from "@/components/gsf/sectores-section";
+import { IndustriaSection } from "@/components/gsf/industria-section";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
@@ -24,8 +25,8 @@ export default function Home() {
       <SofomConcepto />
       <CasosUsoSection />
       <BienestarFinancieroSection />
-      <SofomSection />
-      <SectoresSection />     
+      <SofomSection /> 
+      <IndustriaSection />   
       <ContactSection />
       <FooterSection />
     </main>

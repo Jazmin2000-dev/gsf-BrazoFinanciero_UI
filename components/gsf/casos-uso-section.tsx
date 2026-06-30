@@ -80,7 +80,7 @@ export function CasosUsoSection() {
     {
       icon: EntrepreneurIcon,
       title: "Financia a clientes",
-      description: "Cierra más ventas ofreciendo crédito directo y facilita la decisión de compra.",
+      description: "Cierra más ventas ofreciendo crédito directo y genera ingresos adicionales con los intereses.",
     },
     {
       icon: InvestorIcon,

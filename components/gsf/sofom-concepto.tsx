@@ -31,14 +31,14 @@ export function SofomConcepto() {
 
   const benefits = [
     "Vendes más por dar facilidad a tus clientes.",
-    "El interés del financiamiento se queda en casa",
+    "El interés del financiamiento se queda en casa.",
     "Aperturas una nueva vertical de negocio.",
     "El riesgo no está en dar crédito, está en no controlarlo.",
     "Tienes el control de tus financiamientos; del scoring y la estructura de tus propios créditos entregados.",
     "Fidelizas con tus clientes y colaboradores.",
     "Apoyas de manera formal a tus empleados.",
     "Generas un clima laboral estable y reduces la rotación.",
-    "Accedes a líneasde fondeoexterno.",
+    "Accedes a líneas de fondeo externo.",
     "Tienes beneficios fiscales estratégicos reales y legales.",
   ];
 
@@ -116,7 +116,7 @@ export function SofomConcepto() {
               ¿Qué es una SOFOM?
             </h2>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-9 max-w-2xl mx-auto text-pretty">
-              La SOFOM (Sociedad Financiera de Objeto Múltiple) es la figura legal utilizada en México para operar distintos productos
+              La SOFOM (Sociedad Financiera de Objeto Múltiple) es una figura legal utilizada en México para operar distintos productos
               financieros, como crédito, arrendamiento y factoraje, de manera estructurada, formal y
               regulada. Es la base sobre la que se construye un brazo financiero profesional.
             </p>

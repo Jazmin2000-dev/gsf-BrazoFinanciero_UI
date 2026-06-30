@@ -9,9 +9,6 @@ import {
   ArrowRight, 
   ArrowLeft, 
   CheckCircle, 
-  Mail, 
-  MessageCircle, 
-  FileText,
   Check
 } from "lucide-react";
 import { AnimatedWave } from "./animated-wave";
@@ -77,6 +74,14 @@ export function ContactSection() {
 
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
+
+    // Convertimos la lista del Paso 3 en un texto separado por comas para Make
+    const payloadParaMake = {
+      ...formData,
+      operationTypes: formData.operationTypes ? formData.operationTypes.join(", ") : ""
+    };
+
+
     try {
       // Enviamos los datos a tu Webhook
       const response = await fetch("https://hook.us2.make.com/8qwndw155yxti9pnmigmz7ox75kuwh6o", {
@@ -85,7 +90,7 @@ export function ContactSection() {
           "Content-Type": "application/json",
         },
         // formData ya tiene todo: name, email, priority, etc.
-        body: JSON.stringify(formData), 
+        body: JSON.stringify(payloadParaMake), 
       });
 
       if (response.ok) {
@@ -422,7 +427,7 @@ const isStep2Valid = formData.currentSituation !== "";
                     type="button"
                     onClick={nextStep}
                     className="flex-1 bg-primary hover:bg-primary/90 group"
-                    disabled={!formData.operationTypes?.length}
+                    disabled={!isStep3Valid}
                   >
                     Continuar
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />

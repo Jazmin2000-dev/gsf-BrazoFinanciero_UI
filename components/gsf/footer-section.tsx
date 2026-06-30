@@ -70,10 +70,9 @@ export function FooterSection() {
             <ul className="space-y-3">
               {[
                 { label: "Volver al inicio", href: "#" },
-                { label: "Constituye una SOFOM", href: "#sofom" },
+                { label: "Qué es un brazo financiero", href: "#brazo financiero" },
                 { label: "Cómo es el proceso", href: "#proceso" },
-                { label: "Constituir vs Comprar", href: "#diferencias" },
-                { label: "Preguntas frecuentes", href: "#faq" },
+                { label: "Sectores de aplicación", href: "#sectores" },
               ].map((link, index) => (
                 <motion.li
                   key={link.label}
